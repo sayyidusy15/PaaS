@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #020617;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.8);
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px 0;
+  border-bottom: 1px solid #1f2937;
+}
+
+td:first-child {
+  color: #9ca3af;
+}

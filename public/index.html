@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oplib Ranger | PaaS App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h3>Oplib Ranger | PaaS App</h3>
+    <h1>Status Dashboard</h1>
+
+    <table>
+      <tr>
+        <td>Status</td>
+        <td id="status">-</td>
+      </tr>
+      <tr>
+        <td>Uptime</td>
+        <td id="uptime">-</td>
+      </tr>
+      <tr>
+        <td>Requests</td>
+        <td id="requests">-</td>
+      </tr>
+      <tr>
+        <td>Visitors</td>
+        <td id="visitors">-</td>
+      </tr>
+      <tr>
+        <td>Node</td>
+        <td id="node">-</td>
+      </tr>
+    </table>
+  </main>
+
+  <script>
+    async function loadData() {
+      const res = await fetch("/data");
+      const data = await res.json();
+
+      document.getElementById("status").textContent = data.status;
+      document.getElementById("uptime").textContent = data.uptime;
+      document.getElementById("requests").textContent = data.requests;
+      document.getElementById("visitors").textContent = data.visitors;
+      document.getElementById("node").textContent = data.node;
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
